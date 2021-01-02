@@ -15,7 +15,7 @@ interface Account {
   name: string;
 }
 
-const DownloadMobileApp: React.FC = () => {
+const DownloadIOSApp: React.FC = () => {
   const { params } = useRouteMatch<RouteParams>();
   const [loading, setLoading] = useState(true);
   const [account, setAccount] = useState<Account>({} as Account);
@@ -52,10 +52,10 @@ const DownloadMobileApp: React.FC = () => {
           </p>
 
           <DownloadButton
-            href={process.env.REACT_APP_MOBILE_APK_DOWNLOAD_LINK}
+            href={process.env.REACT_APP_IOS_DOWNLOAD_LINK}
             download
           >
-            Download Android App
+            Download iOS App
           </DownloadButton>
         </>
       )}
@@ -63,4 +63,4 @@ const DownloadMobileApp: React.FC = () => {
   );
 };
 
-export default DownloadMobileApp;
+export default DownloadIOSApp;

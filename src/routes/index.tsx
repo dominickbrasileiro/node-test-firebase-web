@@ -3,14 +3,19 @@ import { Switch, Route } from 'react-router-dom';
 
 import CreateAccount from '../pages/CreateAccount';
 import Account from '../pages/Account';
-import DownloadMobileApp from '../pages/DownloadMobileApp';
+import DownloadAndroidApp from '../pages/DownloadAndroidApp';
+import DownloadIOSApp from '../pages/DownloadIOSApp';
 
 const Routes: React.FC = () => {
   return (
     <Switch>
       <Route path="/" exact component={CreateAccount} />
       <Route path="/:account_name" exact component={Account} />
-      <Route path="/:account_name/download" component={DownloadMobileApp} />
+      <Route
+        path="/:account_name/download-android"
+        component={DownloadAndroidApp}
+      />
+      <Route path="/:account_name/download-ios" component={DownloadIOSApp} />
     </Switch>
   );
 };
